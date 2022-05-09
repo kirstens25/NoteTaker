@@ -9,11 +9,14 @@ const apiRouter= require ('./routes/api')
 //configure port
 const PORT = 3001;
 
+// get middleware
+app.use(express.static('public'));
+app.use(express.json());
+
 app.use(webRouter);
 app.use(apiRouter);
 
-// get middleware
-app.use(express.static('public'));
+
 
 
 app.listen(PORT, function() {
