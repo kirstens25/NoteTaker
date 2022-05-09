@@ -7,7 +7,7 @@ const apiRouter= require ('./routes/api')
 
 
 //configure port
-const PORT = 3001;
+const port = process.env.PORT || 3001;
 
 // get middleware
 app.use(express.static('public'));
